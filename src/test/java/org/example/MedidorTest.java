@@ -9,19 +9,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class MedidorTest {
 
     @Test
-    void deveRetornarTemperaturaEmCelsius() {
+    void deveRetornarVelocidadeEmKmH() {
         Medidor medidor = new Medidor();
-        medidor.setTemperatura("25");
+        medidor.setVelocidade("100");
 
-        assertEquals("25.0", medidor.getTemperatura());
+        assertEquals("100.0", medidor.getVelocidade());
     }
 
     @Test
-    void deveRetornarTemperaturaEmFahrenheit() {
+    void deveRetornarVelocidadeEmMph() {
         Medidor medidor = new Medidor();
-        medidor.setTemperatura("25");
+        medidor.setVelocidade("100");
 
-        assertEquals(77.0f, medidor.getFahrenheit());
+        assertEquals(62.1371f, medidor.getMph(), 0.001f);
     }
-
 }

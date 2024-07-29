@@ -2,24 +2,24 @@ package org.example;
 
 public class Medidor {
 
-    ITemperatura temperatura;
-    TemperaturaAdapter adaptador;
+    IVelocidade velocidade;
+    VelocidadeAdapter adaptador;
 
     public Medidor() {
-        temperatura = new TemperaturaCelsius();
-        adaptador = new TemperaturaAdapter(temperatura);
+        velocidade = new VelocidadeKmH();
+        adaptador = new VelocidadeAdapter(velocidade);
     }
 
-    public void setTemperatura(String grausCelsius) {
-        temperatura.setTemperatura(grausCelsius);
-        adaptador.salvarTemperatura();
+    public void setVelocidade(String kmh) {
+        velocidade.setVelocidade(kmh);
+        adaptador.salvarVelocidade();
     }
 
-    public String getTemperatura() {
-        return adaptador.recuperarTemperatura();
+    public String getVelocidade() {
+        return adaptador.recuperarVelocidade();
     }
 
-    public float getFahrenheit() {
-        return adaptador.getFahrenheit();
+    public float getMph() {
+        return adaptador.getMph();
     }
 }
